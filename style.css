@@ -5,15 +5,27 @@ body {
 *, *::after, *::before {
     box-sizing: border-box;
 }
+
+:root {
+    --white-color: #F9F9F9;
+    --gray-light: #E9EAEB;
+    --gray-dark: #525B60;
+    --black-prim: #283339;
+    --top-nav-color: #303798;
+    --sidenav-color: #3A42B7;
+    --sidenav-hover: #303798;
+    --animation-duration: 200ms;
+    --animation-timing-curve: ease-in-out;
+    --header-height: 40px;
+}
 .header {
     display: flex;
     align-items: center;
     position: sticky;
     top: 0;
     background-color: #303798;    
-    margin-bottom: 1rem;
     padding: 0 .5rem;
-    height: 40px;
+    height: var(--header-height);
 }
 .menu-icon-btn {
     background: none;
@@ -22,11 +34,14 @@ body {
 }
 
 .menu-icon {
-    fill: #FFFFFF;    
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin: .5rem .5rem;    
+    fill: var(--white-color);    
+    width: 25px;
+    height: 25px;
+    cursor: pointer;      
+}
+
+.menu-icon:hover {
+    fill: var(--gray-dark);
 }
 
 .logo {
@@ -39,43 +54,82 @@ body {
 
 .sidebar {
     flex-shrink: 0;
+    overflow: hidden;
     width: 96px;        
-    border-right: 2px solid black;
-    margin-top: -1rem;
-    padding-top: 3rem;
+    border-right: 1px solid black;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 40px);
-    overflow-x: hidden;
-    background: #3A42B7;
+    height: calc(100vh - var(--header-height));
+    padding-top: 1rem;
     align-items: center;
+    justify-content: stretch;
+    transition: width var(--animation-duration) var(--animation-timing-curve);
+    position: sticky;
+    left: 0;
+    top: var(--header-height);
+    background: var(--sidenav-color);
 }
 
 .sidebar .hidden-sidebar {
-    display: block;
+    opacity: 0;
+    width: 0;
+    transition: opacity var(--animation-duration) var(--animation-timing-curve);
 }
 
-.sidebar .profile-img {       
-    width: 40px;
-    height: 40px;    
+.sidebar.open .hidden-sidebar {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+}
+
+.sidebar .top-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .profile-img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    transition: var(--animation-duration) var(--animation-timing-curve);    
+}
+
+.sidebar.open .profile-img {
+    width: 90px;
+    height: 90px;
 }
 
 .sidebar .profile-img > img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;   
-    padding: 1rem; 
+    border-radius: 50%;     
 }
 
 .mid-sidebar {
     flex-grow: 1;
-    overflow-y: auto;    
+    overflow-y: auto; 
+    overflow-x: hidden;
+    margin: 1rem 0;   
+}
+
+.mid-sidebar, .bottom-sidebar {
+    width: 100%;
 }
 .container {
     display: flex;
 }
 
 .content {
-    margin: 0 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem;        
 }
+
+.sidebar-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
