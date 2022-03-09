@@ -55,7 +55,7 @@ body {
 .sidebar {
     flex-shrink: 0;
     overflow: hidden;
-    width: 96px;        
+    width: 75px;        
     border-right: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -133,3 +133,84 @@ body {
     list-style: none;
 }
 
+.sidebar.open .sidebar-link {
+    justify-content: flex-start;
+}
+
+.sidebar-icon {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+}
+
+.sidebar-list .hidden-sidebar {
+    margin-left: 1.5rem;
+    white-space: nowrap;
+}
+
+.sidebar-link {
+    display: flex;
+    width: 100%;
+    padding: .5rem 0;
+    color: var(--white-color);
+    text-decoration: none;
+    align-items: center;
+    padding-left: 25px;
+}
+
+.sidebar-list-item {
+    position: relative;
+    width: 100%;
+    fill: var(--gray-light);
+}
+.sidebar-list-item.active {
+    fill: var(--white-color);
+    background-color: var(--sidenav-hover);
+}
+
+.sidebar-list-item:hover {
+    background-color: var(--white-color);
+    transition: 300ms ease-in-out;
+}
+
+.sidebar-list-item.active::before {
+    content: "";
+    background-color: var(--sidenav-color);
+    height: 100%;
+    left: 0;
+    width: 3px;
+    position: absolute;
+}
+
+.sidebar.open {
+    width: 200px;
+}
+
+.agents-name {
+    color: var(--white-color);
+    font-size: .75rem;
+    font-weight: bold;
+    margin-bottom: .15rem;
+    margin-top: .5rem;
+}
+
+.agents-position {
+    color: var(--gray-light);
+    font-size: .75rem;
+}
+
+.sidebar .top-sidebar {
+    height: 30px;
+    transition: height var(--animation-duration) var(--animation-timing-curve);
+}
+
+.sidebar.open .top-sidebar {
+    height: 125px;
+}
+
+.sidebar .top-sidebar .hidden-sidebar {
+    text-align: center;
+    width: 100%;
+}
+
+/*{coding is life}*/ 
