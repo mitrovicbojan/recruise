@@ -240,7 +240,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 458px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .date-inputs label {
@@ -252,5 +252,30 @@ body {
     height: auto;
     padding: 10px;
     border-radius: 10px;
+}
+
+.cruise-inputs {
+    display: flex;
+    width: 458px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.cruise-type {
+    display: flex;
+    flex-direction: column;
+}
+
+.cabine-type {
+    display: flex;
+    flex-direction: column;
+}
+
+.avail-btn {
+    width: 458px;
+    cursor: pointer;
+    background-color: #5058C8;
+    height: 54px;
+    border-radius: 4px;
 }
 /*{coding is life}*/ 
