@@ -73,7 +73,7 @@ body {
 .sidebar .hidden-sidebar {
     opacity: 0;
     width: 0;
-    transition: opacity var(--animation-duration) var(--animation-timing-curve);
+    transition: opacity var(--animation-duration) var(--animation-timing-curve);    
 }
 
 .sidebar.open .hidden-sidebar {
@@ -116,8 +116,10 @@ body {
 .mid-sidebar, .bottom-sidebar {
     width: 100%;
 }
+
 .container {
     display: flex;
+    background-color: var(--gray-light);      
 }
 
 .content {
@@ -213,4 +215,42 @@ body {
     width: 100%;
 }
 
+/*Inputs*/
+
+.container .avail-map {    
+    position: absolute;
+    width: 636px;
+    height: 352px;
+    left: 652px;
+    top: 160px;
+    border: 2px solid red;
+    border-radius: 10px;   
+    background-color: var(--white-color);    
+}
+
+.avail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.date-inputs {
+    display: flex;
+    flex-direction: column;
+    width: 458px;
+    margin-bottom: 20px;
+}
+
+.date-inputs label {
+    margin-bottom: 5px;
+}
+
+.date-inputs input {
+    font-size: 18px;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
 /*{coding is life}*/ 
