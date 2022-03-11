@@ -240,7 +240,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 458px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .date-inputs label {
@@ -252,23 +252,50 @@ body {
     height: auto;
     padding: 10px;
     border-radius: 10px;
+    border: 1px solid var(--gray-dark);
 }
 
 .cruise-inputs {
     display: flex;
     width: 458px;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    height: auto;    
 }
 
 .cruise-type {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin-right: 10px;
 }
 
 .cabine-type {
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.cabine-type label {
+    margin-bottom: 5px;
+}
+
+.cabine-type select {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid var(--gray-dark);    
+}
+
+.cruise-type label {
+    margin-bottom: 5px;
+}
+
+.cruise-type select {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid var(--gray-dark);    
 }
 
 .avail-btn {
@@ -277,5 +304,8 @@ body {
     background-color: #5058C8;
     height: 54px;
     border-radius: 4px;
+    color: #E9EAEB;    
+    font-size: 18px;
+    border: none;    
 }
 /*{coding is life}*/ 
