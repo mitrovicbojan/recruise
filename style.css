@@ -248,10 +248,10 @@ body {
 }
 
 .date-inputs input {
-    font-size: 18px;
+    font-size: 16px;
     height: auto;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 6px;
+    border-radius: 4px;
     border: 1px solid var(--gray-dark);
 }
 
