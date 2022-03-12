@@ -123,7 +123,7 @@ body {
 }
 
 .content {
-    margin: 1rem;        
+    margin: 1rem;            
 }
 
 .sidebar-list {
@@ -315,9 +315,10 @@ body {
 /*available/not available*/
 
 .check-avail {
-    border: 2px solid red;
+    border: 2px solid lightgreen;
     background-color: lightgreen;
-    border-radius: 10px;    
+    border-radius: 10px;
+          
 }
 .check-title {
     display: flex;
@@ -330,4 +331,16 @@ body {
     font-weight: 900;
     font-size: 20px;
 }
+
+.display-avail {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 15px;    
+}
+
+.display-cabins {
+    border-bottom: 2px solid red;
+}
+
+
 /*{coding is life}*/ 
