@@ -223,7 +223,7 @@ body {
     height: 352px;
     left: 652px;
     top: 160px;
-    border: 2px solid red;
+    border: none;
     border-radius: 10px;   
     background-color: var(--white-color);    
 }
@@ -234,6 +234,7 @@ body {
     align-items: center;
     flex-direction: column;
     margin: 50px;
+    margin-bottom: 100px;
 }
 
 .date-inputs {
@@ -307,5 +308,26 @@ body {
     color: #E9EAEB;    
     font-size: 18px;
     border: none;    
+}
+
+/*inputs end*/
+
+/*available/not available*/
+
+.check-avail {
+    border: 2px solid red;
+    background-color: lightgreen;
+    border-radius: 10px;    
+}
+.check-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        
+}
+.check-title h3 {
+    color: var(--white-color);
+    font-weight: 900;
+    font-size: 20px;
 }
 /*{coding is life}*/ 
