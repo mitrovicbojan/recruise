@@ -119,11 +119,11 @@ body {
 
 .container {
     display: flex;
-    background-color: var(--gray-light);      
+    background-color: var(--gray-light);        
 }
 
 .content {
-    margin: 1rem;            
+    margin: 1rem;               
 }
 
 .sidebar-list {
