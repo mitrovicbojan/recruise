@@ -339,8 +339,25 @@ body {
 }
 
 .display-cabins {
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid var(--gray-light);
+    display: flex;
+    justify-content: space-between;
 }
+.display-cruise {
+    border-bottom: 2px solid var(--gray-light);
+    display: flex;
+    justify-content: space-between;
+}
+.display-price {
+    border-bottom: 2px solid var(--gray-light);
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-option {
+    display: flex;
+}
+
 
 /*available/not available end*/
 
